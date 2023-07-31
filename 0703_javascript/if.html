@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // let score = 50
+        // score 60이상 합격 콘솔 출력
+        // if(score >= 60){
+        //     console.log("합격")
+        //     // let 붙이면 지역변수 생성
+        //     // 블럭 외부에서 사용 불가
+        //     let name = "adam"
+
+            // let score = 50;
+            // let msg;
+
+            // // score 60이상 합격, 미만 불합격
+            // if(score >= 60){
+            //     msg = "합격";
+            // }else{
+            //     msg = "불합격";
+            // }
+            // console.log(msg);
+        // }
+        // let score = -79;
+        // // 80이상 우수, 60이상 보통, 60미만 저조
+        // // 0~100 아닌 숫자는 잘못된 점수로 만들어야 함
+        // if(score >= 80 && score <= 100){
+        //     console.log("우수");
+        // }else if(score >= 60 && score < 80){
+        //     console.log("보통");
+        // }else if(score >= 0 && score < 60){
+        //     console.log("저조");
+        // }else{
+        //     console.log("잘못된 점수")
+        // }
+        let year = 2400;
+        // year가 윤년인지 판별 후 윤년 콘솔 출력, 아니면 아니라고 출력
+        // 윤년은 아래 두 조건 중 하나만 만족하면 됨
+        // 1. 4의 배수이고 100의 배수는 아닌 경우
+        // 2. 400의 배수인 경우
+        if(year%400 == 0){
+            console.log(year + "년은 윤년");
+        }else if(year%4 == 0 && year%100 != 0){
+            console.log(year + "년은 윤년");
+        }else{
+            console.log(year + "년은 윤년 아님");
+        }
+        // 강사 답안
+        // if(year % 4 == 0 && year % 100 != 0 || year % 400 == 0){
+        //     console.log(year + "년은 윤년");
+        // }else{
+        //     console.log(year + "년은 윤년 아님");
+        // }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

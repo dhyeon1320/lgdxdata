@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html 해보기</title>
+    <style>
+        .redarea{
+            color:salmon;
+        }
+    </style>
+</head>
+<body bgcolor="pink" text="white">
+    <h1 class="redarea">안녕하세요</h1>
+    <p class="redarea">반갑습니다</p>
+    <p id="adam">안녕히 계세요</p>
+    <button id="btn"> 클릭 </button>
+    <script>
+        document.getElementById("btn").addEventListener(
+            "click", function(e){
+                document.getElementById("adam").innerHTML = "클릭"
+            })
+    </script>
+    <h3>커피</h3>
+    <ol>
+        <li>아메리카노</li>
+        <li>카페라떼</li>
+    </ol>
+    
+    <!--상대 경로를 이용한 링크 설정-->
+    <p><a href="./index.html" target="_blank">인덱스</a></p>
+    <!--절대 경로를 이용한 링크 설정-->
+    <p>< a href="https://www.google.co.kr" target="_blank">구글</ a></p>
+
+    <!--절대 경로를 이용한 이미지 출력-->
+    <img src="https://t1.daumcdn.net/cfile/tistory/24283C3858F778CA2E" width="200" height="200" />
+    <!--상대 경로를 이용한 이미지 출력-->
+    <img src="./202212008462_206.jpg" width="200" height="200" />
+
+
+
+</body>
+</html>

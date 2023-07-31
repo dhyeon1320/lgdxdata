@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 첫 번째 방법
+        // // 생성자가 없는 경우 동일한 모양의 2개의 객체 생성
+        // let ar = [
+        //     {name:"kim", disp:function(){console.log(this.name)}}, 
+        //     {name:"lee", disp:function(){console.log(this.name)}}
+        // ];
+        // for(idx in ar){
+        //     ar[idx].disp();
+        // }
+
+        // 두 번째 방법
+        // // 생성자 - 함수 안에서 this 사용했기 때문
+        // let person = function(name){
+        //     this.name = name;
+        //     this.disp = function(){console.log(this.name)}
+        // }
+
+        // // 메서드 다시 만들지 않고 속성만 설정해서 instance 생성
+        // // 생성자를 이용해서 instance 만들 때는 new와 함께 호출
+        // // heap에 instance 생성
+        // ar = [new person("park"), new person("choi")]
+
+        // for(idx in ar){
+        //     ar[idx].disp();
+        // }
+
+        // // 세 번째 방법
+        // // 클래스를 생성하고 instance 생성
+        // // 클래스 이름은 관습적으로 대문자로 시작
+        // let Member = class{
+        //     // 생성자
+        //     constructor(name){
+        //         this.name = name
+        //     }
+        //     // 클래스 안에 메서드를 만들 때는 let이나 function 생략 가능
+        //     disp(){
+        //         console.log(this.name); 
+        //     }
+        // }
+        // ar = [new Member("hong"), new Member("ryu")]
+        // for(idx in ar){
+        //     ar[idx].disp()
+        // }
+
+        let Person = class{
+            // 생성자
+            constructor(name, score){
+                this.name = name;
+                this.score = score;
+            }
+            disp(){
+                console.log(this.name + ":" + this.score);
+            }
+
+            // getter
+            getName(){
+                return this.name
+            }
+
+            // setter
+            setName(name){
+                this.name = name
+            }
+
+            getScore(){
+                return this.score;
+            }
+
+            setScore(score){
+                // 올바른 데이터인지 확인하는 유효성 검사
+                if(score < 0 || score > 100){
+                    alert("적절하지 않은 점수");
+                    return;
+                }
+                this.score = score;
+            }
+        }
+        
+        let obj = new Person("kim", 85);
+        obj.setScore(90);
+        obj.disp();
+    </script>
+</body>
+</html>
